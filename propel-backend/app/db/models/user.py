@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 import enum
 from ..base_class import BaseModel
 
+#Kullanıcının sisteme giriş (Authentication) bilgilerini tutar: email, hashed_password, role (admin, manager, employee).
 class UserRole(str, enum.Enum):
     admin = "admin"
     department_manager = "department_manager"

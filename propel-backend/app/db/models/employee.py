@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, Date, ForeignKey
 from sqlalchemy.orm import relationship
 from ..base_class import BaseModel
 
+#User'dan ayrı bir profildir. Çalışanın İK verilerini (position, hire_date) ve performans kayıtlarını tutar. user_id ile User tablosuna bağlıdır.
 class Employee(BaseModel):
     __tablename__ = "employees"
     

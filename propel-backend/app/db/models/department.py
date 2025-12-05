@@ -2,6 +2,7 @@ from sqlalchemy import Column, String, Text
 from sqlalchemy.orm import relationship
 from ..base_class import BaseModel
 
+#Departman adlarını tutar. employees ve kpis ile bire-çok ilişkiye sahiptir.
 class Department(BaseModel):
     __tablename__ = "departments"
     
