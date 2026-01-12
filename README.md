@@ -5,7 +5,7 @@
 ![Vue.js](https://img.shields.io/badge/Frontend-Vue.js_3-green)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-teal)
 
-**TeamPulse**, modern kurumsal yapılar için geliştirilmiş, **Yapay Zeka (AI)** destekli, "Premium" tasarıma sahip bir performans yönetim ve analiz platformudur. Çalışanların teknik yetkinliklerini, motivasyonlarını ve takım içi etkileşimlerini **360 derece** analiz eder.
+**TeamPulse**, modern kurumsal yapılar için geliştirilmiş, **Yapay Zeka (AI)** destekli, "Premium" tasarıma sahip bir performans yönetim ve analiz platformudur. Çalışanların teknik yetkinliklerini, motivasyonlarını ve takım içi etkileşimlerini **360 derece** analiz eder. Hem personel, hem genel müdür hem de departman müdürüne özel dashboardlar vardır.
 
 ---
 
@@ -39,4 +39,4 @@
 
 
 
-Bu proje [MIT](https://choosealicense.com/licenses/mit/) lisansı ile lisanslanmıştır.
+
