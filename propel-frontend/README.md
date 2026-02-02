@@ -1,42 +1,279 @@
-# .
+# 🧊 KUTUP – AI-Driven Performance Management Platform
 
-This template should help get you started developing with Vue 3 in Vite.
+![Backend CI](https://github.com/USERNAME/KUTUP/actions/workflows/backend-ci.yml/badge.svg)
+![Frontend CI](https://github.com/USERNAME/KUTUP/actions/workflows/frontend-ci.yml/badge.svg)
+![Docker Publish](https://github.com/USERNAME/KUTUP/actions/workflows/docker-publish.yml/badge.svg)
+![License](https://img.shields.io/github/license/USERNAME/KUTUP)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Node](https://img.shields.io/badge/node-18%2B-green)
 
-## Recommended IDE Setup
+> **KUTUP**, organizations track, analyze, and optimize employee & department performance using **AI-powered analytics, predictive models, and role-based dashboards**.
+> Modern HR analytics meets real machine learning.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Recommended Browser Setup
+## 📋 Table of Contents
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+* Overview
+* Why KUTUP?
+* Key Features
+* Tech Stack
+* System Architecture
+* Project Structure
+* Getting Started
+* API Documentation
+* Machine Learning Models
+* Role-Based Access Control
+* Testing
+* CI/CD Pipeline
+* Deployment
+* Roadmap
+* Contributing
+* License
+* Contact
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 🎯 Overview
 
-## Customize configuration
+**KUTUP** is a modern, enterprise-grade performance management platform designed to replace subjective, reactive HR processes with **objective, data-driven, and predictive insights**.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+It centralizes performance data, applies machine learning to detect trends and risks, and presents everything through intuitive dashboards tailored to each role.
 
-## Project Setup
+---
 
-```sh
-npm install
+## ❓ Why KUTUP?
+
+Traditional systems struggle with:
+
+❌ Subjective evaluations & manager bias
+❌ Disconnected data sources
+❌ Late reaction to performance issues
+❌ Expensive, bloated enterprise tools
+❌ Poor UX that users avoid
+
+**KUTUP fixes this by:**
+
+✅ Quantifiable KPIs & objective analytics
+✅ Unified performance data platform
+✅ Predictive AI models (forecasting & risk detection)
+✅ Open-source & SME-friendly
+✅ Clean, role-based UX people actually enjoy
+
+---
+
+## ✨ Key Features
+
+### 📊 Core Analytics
+
+* Real-time dashboards (Admin / Manager / Employee)
+* Department-specific KPI tracking
+* Survey management (Motivation, Satisfaction, Stress)
+* Trend visualization & comparisons
+* 9-Box Talent Matrix (Performance × Potential)
+
+### 🤖 AI / ML Capabilities
+
+* Performance forecasting (Prophet)
+* Risk detection (Random Forest)
+* Anomaly detection (Isolation Forest)
+* AI-generated development recommendations
+* Employee clustering & segmentation
+
+### 🔐 Security & Compliance
+
+* Role-Based Access Control (RBAC)
+* JWT authentication
+* Data anonymization
+* GDPR / KVKK-aware design
+
+### 📈 Advanced
+
+* Custom KPI definitions
+* CSV / Excel import
+* Exportable PDF & Excel reports
+* Multi-language support (TR / EN)
+
+---
+
+## 🛠️ Tech Stack
+
+### Backend
+
+* **FastAPI** – REST API
+* **PostgreSQL** – Relational database
+* **SQLAlchemy 2.0** – ORM
+* **Pydantic** – Data validation
+* **JWT (python-jose)** – Auth
+* **Prophet** – Time-series forecasting
+* **scikit-learn** – ML models
+* **Docker** – Containerization
+
+### Frontend
+
+* **Vue.js 3 + TypeScript**
+* **Vite**
+* **Pinia** (state)
+* **Vue Router**
+* **Tailwind CSS**
+* **Chart.js**
+
+### DevOps
+
+* **GitHub Actions** – CI/CD
+* **Docker Compose**
+* **pytest**
+* **Black / Flake8 / ESLint**
+
+---
+
+## 🏗️ System Architecture
+
+KUTUP follows a clean layered architecture:
+
+* **Client Layer**: Vue.js dashboards
+* **API Layer**: FastAPI REST services
+* **Business Logic Layer**: Services
+* **ML Layer**: Forecasting, classification, anomaly detection
+* **Data Layer**: PostgreSQL via SQLAlchemy
+
+---
+
+## 📁 Project Structure
+
+```
+KUTUP/
+├── propel-backend/
+├── propel-frontend/
+├── .github/workflows/
+│   ├── backend-ci.yml
+│   ├── frontend-ci.yml
+│   └── docker-publish.yml
+├── docker-compose.yml
+├── LICENSE
+└── README.md
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Docker & Docker Compose
+* Python 3.10+
+* Node.js 18+
+* Git
+
+### Quick Start (Docker)
+
+```bash
+git clone https://github.com/USERNAME/KUTUP.git
+cd KUTUP
+docker-compose up -d
 ```
 
-### Type-Check, Compile and Minify for Production
+Backend → [http://localhost:8000](http://localhost:8000)
+Frontend → [http://localhost:5173](http://localhost:5173)
 
-```sh
-npm run build
+---
+
+## 📚 API Documentation
+
+* Swagger UI: `http://localhost:8000/docs`
+* ReDoc: `http://localhost:8000/redoc`
+
+JWT required:
+
+```http
+Authorization: Bearer <token>
 ```
+
+---
+
+## 🤖 Machine Learning Models
+
+| Model            | Purpose                 |
+| ---------------- | ----------------------- |
+| Prophet          | Performance forecasting |
+| Random Forest    | Risk classification     |
+| Isolation Forest | Anomaly detection       |
+| K-Means          | Talent segmentation     |
+
+---
+
+## 🔐 Role-Based Access Control
+
+| Role     | Access             |
+| -------- | ------------------ |
+| Admin    | Full system access |
+| Manager  | Department-level   |
+| Employee | Personal data only |
+
+---
+
+## 🧪 Testing
+
+### Backend
+
+```bash
+pytest --cov=app
+```
+
+### Frontend
+
+```bash
+npm run lint
+npm run type-check
+```
+
+Target coverage: **80%**
+
+---
+
+## 🔄 CI/CD Pipeline
+
+### GitHub Actions
+
+* **Backend CI**: tests, lint, coverage
+* **Frontend CI**: lint, type-check, build
+* **Docker Publish**: build & push images
+
+Workflows live in `.github/workflows/`
+
+---
+
+## 🌐 Deployment
+
+* Docker Compose (recommended)
+* AWS / DigitalOcean / Railway
+* Frontend: Vercel / Netlify
+
+---
+
+## 🛣️ Roadmap
+
+* [ ] Notification system
+* [ ] Real-time analytics (WebSockets)
+* [ ] Advanced ML explainability
+* [ ] Mobile-friendly dashboards
+
+---
+
+## 🤝 Contributing
+
+Pull requests welcome.
+Please follow code style and include tests.
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 📬 Contact
+
+Maintained by **KUTUP Team**
+Questions? Open an issue 🚀
