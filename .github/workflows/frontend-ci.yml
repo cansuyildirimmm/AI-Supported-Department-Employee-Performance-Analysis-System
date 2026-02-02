@@ -2,11 +2,11 @@ name: Frontend CI
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main, master,develop]
     paths:
       - 'propel-frontend/**'
   pull_request:
-    branches: [main, develop]
+    branches: [main, master,develop]
     paths:
       - 'propel-frontend/**'
 
