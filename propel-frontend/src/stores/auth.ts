@@ -47,7 +47,8 @@ export const useAuthStore = defineStore('auth', () => {
         full_name: 'System Admin',
         role: 'admin',
         is_active: true,
-        department_id: 1
+        department_id: 1,
+        created_at: new Date().toISOString()
       },
       'manager.yazilim@propel.com': {
         id: 2,
@@ -55,7 +56,8 @@ export const useAuthStore = defineStore('auth', () => {
         full_name: 'Yazılım Müdürü',
         role: 'department_manager',
         is_active: true,
-        department_id: 2
+        department_id: 2,
+        created_at: new Date().toISOString()
       },
       'developer1@propel.com': {
         id: 3,
@@ -63,7 +65,8 @@ export const useAuthStore = defineStore('auth', () => {
         full_name: 'Senior Developer',
         role: 'employee',
         is_active: true,
-        department_id: 2
+        department_id: 2,
+        created_at: new Date().toISOString()
       }
     }
 
@@ -94,7 +97,8 @@ export const useAuthStore = defineStore('auth', () => {
               full_name: 'System Admin',
               role: 'admin',
               is_active: true,
-              department_id: 1
+              department_id: 1,
+              created_at: new Date().toISOString()
             },
             'manager.yazilim@propel.com': {
               id: 2,
@@ -102,7 +106,8 @@ export const useAuthStore = defineStore('auth', () => {
               full_name: 'Yazılım Müdürü',
               role: 'department_manager',
               is_active: true,
-              department_id: 2
+              department_id: 2,
+              created_at: new Date().toISOString()
             },
             'developer1@propel.com': {
               id: 3,
@@ -110,7 +115,8 @@ export const useAuthStore = defineStore('auth', () => {
               full_name: 'Senior Developer',
               role: 'employee',
               is_active: true,
-              department_id: 2
+              department_id: 2,
+              created_at: new Date().toISOString()
             }
           }
           user.value = mockUsers[email] || null
