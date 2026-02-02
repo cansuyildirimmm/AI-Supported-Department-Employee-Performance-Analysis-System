@@ -1,8 +1,8 @@
 # 🧊 KUTUP – AI‑Driven Performance Management Platform
 
-![Backend CI](https://github.com/USERNAME/KUTUP/actions/workflows/backend-ci.yml/badge.svg)
-![Frontend CI](https://github.com/USERNAME/KUTUP/actions/workflows/frontend-ci.yml/badge.svg)
-![Docker Publish](https://github.com/USERNAME/KUTUP/actions/workflows/docker-publish.yml/badge.svg)
+[![Backend CI](https://github.com/ddemi-ssena/PROPEL-AI-Performance/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/ddemi-ssena/PROPEL-AI-Performance/actions/workflows/backend-ci.yml)
+[![Frontend CI](https://github.com/ddemi-ssena/PROPEL-AI-Performance/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/ddemi-ssena/PROPEL-AI-Performance/actions/workflows/frontend-ci.yml)
+[![Docker Build & Push](https://github.com/ddemi-ssena/PROPEL-AI-Performance/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/ddemi-ssena/PROPEL-AI-Performance/actions/workflows/docker-publish.yml)
 ![License](https://img.shields.io/github/license/USERNAME/KUTUP)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Node](https://img.shields.io/badge/node-18%2B-green)
