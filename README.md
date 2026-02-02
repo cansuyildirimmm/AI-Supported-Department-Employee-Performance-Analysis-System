@@ -7,7 +7,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Node](https://img.shields.io/badge/node-18%2B-green)
 
-> **KUTUP**, organizations track, analyze, and optimize employee & department performance using **AI‑powered analytics, predictive models, and role‑based dashboards**.
+> **KUTUP**, organizations track, analyze and optimize employee & department performance using **AI‑powered analytics, predictive models and role‑based dashboards**.
 > Modern HR analytics meets real machine learning.
 
 ---
@@ -276,4 +276,5 @@ MIT License
 ## 📬 Contact
 
 Maintained by **KUTUP Team**
+
 Questions? Open an issue 🚀
