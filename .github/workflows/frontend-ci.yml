@@ -25,9 +25,12 @@ jobs:
           cache: 'npm'
           cache-dependency-path: propel-frontend/package-lock.json
 
+      # 🔧 KRİTİK DÜZELTME BURASI
       - name: Install dependencies
         working-directory: ./propel-frontend
-        run: npm ci
+        run: |
+          npm install
+          npm rebuild rollup
 
       - name: Linting with ESLint
         working-directory: ./propel-frontend
