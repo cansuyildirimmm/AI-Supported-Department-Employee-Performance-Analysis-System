@@ -2,11 +2,11 @@ name: Frontend CI
 
 on:
   push:
-    branches: [main, master,develop]
+    branches: [main, master, develop]
     paths:
       - 'propel-frontend/**'
   pull_request:
-    branches: [main, master,develop]
+    branches: [main, master, develop]
     paths:
       - 'propel-frontend/**'
 
@@ -15,36 +15,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: propel-frontend/package-lock.json
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: propel-frontend/package-lock.json
 
-    - name: Install dependencies
-      working-directory: ./propel-frontend
-      run: npm ci
+      - name: Install dependencies
+        working-directory: ./propel-frontend
+        run: npm ci
 
-    - name: Linting with ESLint
-      working-directory: ./propel-frontend
-      run: npm run lint || true  # İlk aşamada hatalar varsa devam et
+      - name: Linting with ESLint
+        working-directory: ./propel-frontend
+        run: npm run lint || true
 
-    - name: Type check
-      working-directory: ./propel-frontend
-      run: npm run type-check || true
+      - name: Type check
+        working-directory: ./propel-frontend
+        run: npm run type-check || true
 
-    - name: Build
-      working-directory: ./propel-frontend
-      env:
-        VITE_API_URL: http://localhost:8000/api/v1
-      run: npm run build
+      - name: Build
+        working-directory: ./propel-frontend
+        env:
+          VITE_API_URL: http://localhost:8000/api/v1
+        run: npm run build
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: frontend-build
-        path: propel-frontend/dist
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build
+          path: propel-frontend/dist
