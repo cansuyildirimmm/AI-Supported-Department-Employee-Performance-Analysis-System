@@ -29,13 +29,13 @@ jobs:
       working-directory: ./propel-frontend
       run: npm ci
 
-    - name: Linting with ESLint
-      working-directory: ./propel-frontend
-      run: npm run lint || true
+    # - name: Linting with ESLint
+    #   working-directory: ./propel-frontend
+    #   run: npm run lint || true
 
-    - name: Type check
-      working-directory: ./propel-frontend
-      run: npm run type-check || true
+    # - name: Type check
+    #   working-directory: ./propel-frontend
+    #   run: npm run type-check || true
 
     - name: Build
       working-directory: ./propel-frontend
