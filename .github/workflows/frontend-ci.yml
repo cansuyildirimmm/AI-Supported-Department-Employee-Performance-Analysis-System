@@ -31,7 +31,7 @@ jobs:
 
     - name: Linting with ESLint
       working-directory: ./propel-frontend
-      run: npm run lint || true  # İlk aşamada hatalar varsa devam et
+      run: npm run lint || true
 
     - name: Type check
       working-directory: ./propel-frontend
