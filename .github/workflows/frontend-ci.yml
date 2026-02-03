@@ -5,6 +5,7 @@ on:
     branches: [main, master, develop]
     paths:
       - 'propel-frontend/**'
+      - '.github/workflows/frontend-ci.yml'
   pull_request:
     branches: [main, master, develop]
     paths:
@@ -22,12 +23,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: propel-frontend/package-lock.json
 
-      - name: Install dependencies
+      # ✅ KRİTİK: Cache kullanma, clean install yap
+      - name: Clean install dependencies
         working-directory: ./propel-frontend
-        run: npm ci
+        run: |
+          npm install --legacy-peer-deps
+
+      # ✅ Rollup native binding'i manuel yükle
+      - name: Install Rollup native bindings
+        working-directory: ./propel-frontend
+        run: |
+          npm install --save-optional @rollup/rollup-linux-x64-gnu
 
       - name: Linting with ESLint
         working-directory: ./propel-frontend
@@ -48,3 +55,4 @@ jobs:
         with:
           name: frontend-build
           path: propel-frontend/dist
+          retention-days: 7
