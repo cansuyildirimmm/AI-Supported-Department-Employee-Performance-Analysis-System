@@ -27,7 +27,7 @@ jobs:
 
     - name: Install dependencies
       working-directory: ./propel-frontend
-      run: npm ci
+      run: npm install
 
     # - name: Linting with ESLint
     #   working-directory: ./propel-frontend
